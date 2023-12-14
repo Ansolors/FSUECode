@@ -128,7 +128,7 @@ function [ PredictY , model ] = FSUE( ValX , Trn , Para )
             end
             Evpi = s(vpi) * Halph(vpi) - s(vpi) * epsilon;
             Evpj = s(vpi) * Halph(vpj) - s(vpj) * epsilon;
-            alph =  wei*updatepair2(Para,vpi,vpj,s,alph,Evpi,Evpj,H, idmx) + (1-wei)*alph;
+            alph =  wei*updatepair(Para,vpi,vpj,s,alph,Evpi,Evpj,H, idmx) + (1-wei)*alph;
         end
 % % %         ----- DCD ----
         for it3 = 1: itDCD
